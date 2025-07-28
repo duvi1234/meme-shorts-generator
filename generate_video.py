@@ -1,6 +1,4 @@
 import os
-os.environ["IMAGEMAGICK_BINARY"] = r"C:\Program Files\ImageMagick-7.1.2-Q16-HDRI\magick.exe"
-
 import requests
 from moviepy.editor import (
     VideoFileClip,
@@ -8,12 +6,6 @@ from moviepy.editor import (
     CompositeVideoClip,
     ImageClip,
 )
-import moviepy.config as mpy_conf
-
-# Fix ImageMagick path
-mpy_conf.change_settings({
-    "IMAGEMAGICK_BINARY": r"C:\Program Files\ImageMagick-7.1.2-Q16-HDRI\magick.exe"
-})
 
 # Paths
 BACKGROUND_VIDEO_PATH = "assets/background_video.mp4"
@@ -54,14 +46,12 @@ def generate_video():
 
     meme_width = video.w * 0.8
     meme_height = video.h * 0.50
-    padding_y = 50  # Space from top and bottom
+
+    top_y = int(video.h * 0.12)
+    bottom_y = int(video.h * 0.65)
 
     top_img = download_image(memes[0]["url"], "temp_meme1.jpg")
     bottom_img = download_image(memes[1]["url"], "temp_meme2.jpg")
-
-        # Adjusted Y positions to center better visually (not too close to edges)
-    top_y = int(video.h * 0.12)     # 12% from the top
-    bottom_y = int(video.h * 0.65)  # 65% from the top
 
     top_clip = (
         ImageClip(top_img)
@@ -76,7 +66,6 @@ def generate_video():
         .set_duration(video.duration)
         .set_position(("center", bottom_y))
     )
-
 
     final = CompositeVideoClip([video, top_clip, bottom_clip]).set_audio(audio)
 
