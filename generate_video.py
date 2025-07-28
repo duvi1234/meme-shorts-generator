@@ -7,6 +7,8 @@ from moviepy.editor import (
     ImageClip,
 )
 
+from PIL import Image
+Image.ANTIALIAS = Image.Resampling.LANCZOS
 # Paths
 BACKGROUND_VIDEO_PATH = "assets/background_video.mp4"
 BACKGROUND_MUSIC_PATH = "assets/background_music.mp3"
