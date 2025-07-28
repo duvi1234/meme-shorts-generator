@@ -1,6 +1,7 @@
 requests
 Pillow
 moviepy==1.0.3
+gunicorn
 google-api-python-client
 google-auth
 google-auth-oauthlib
