@@ -1,6 +1,3 @@
-# meme-shorts-generator
-A web app that auto-generates meme videos using trending memes, background video, and music. Download the final MP4 in one click. Built with Python, Flask, MoviePy, and a responsive HTML/JS interface. Perfect for Shorts or Reels. Deployable on Render or locally.         
-
 # Meme Shorts Generator 🎥😂
 
 This is a fully automated web app that generates funny meme videos using trending memes, a background video, and music. You can generate and download a ready-to-upload meme short (MP4) in a single click!
@@ -40,6 +37,9 @@ project/
 ├── README.md
 └── web/final_video.mp4 # Generated output
 
+bash
+Copy
+Edit
 
 ## 🖥️ Local Setup
 
@@ -49,9 +49,15 @@ project/
    cd meme-shorts-generator
 Install Dependencies
 
+bash
+Copy
+Edit
 pip install -r requirements.txt
 Run the App
 
+bash
+Copy
+Edit
 python app.py
 Access in Browser
 Open http://127.0.0.1:5000 in your browser.
@@ -77,5 +83,10 @@ MIT License
 
 🎬 Created for fun, reels, and rapid meme delivery!
 
+yaml
+Copy
+Edit
+
+---
 
 Let me know if you want a `render.yaml` or deployment screenshot too.
