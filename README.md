@@ -40,9 +40,6 @@ project/
 ├── README.md
 └── web/final_video.mp4 # Generated output
 
-bash
-Copy
-Edit
 
 ## 🖥️ Local Setup
 
@@ -52,15 +49,9 @@ Edit
    cd meme-shorts-generator
 Install Dependencies
 
-bash
-Copy
-Edit
 pip install -r requirements.txt
 Run the App
 
-bash
-Copy
-Edit
 python app.py
 Access in Browser
 Open http://127.0.0.1:5000 in your browser.
@@ -86,10 +77,5 @@ MIT License
 
 🎬 Created for fun, reels, and rapid meme delivery!
 
-yaml
-Copy
-Edit
-
----
 
 Let me know if you want a `render.yaml` or deployment screenshot too.
